@@ -8,7 +8,7 @@ fi
 
 
 # Mojibake
-if [ $uname != "Darwin" ]; then
+if [ `uname` != "Darwin" ]; then
     cat ~/.bashrc moji-bake.txt > ~/.bashrc
 fi
 
@@ -26,7 +26,7 @@ apt-get -y install gnuplot-qt
 
 
 # Emacs
-if [ $uname = "Darwin" ]; then
+if [ `uname` = "Darwin" ]; then
     cat emacs.txt mac-emacs.txt > emacs.txt
 fi
 mv emacs.txt ~/.emacs
