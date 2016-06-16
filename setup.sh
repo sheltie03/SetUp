@@ -9,6 +9,7 @@ fi
 
 # Mojibake
 if [ `uname` != "Darwin" ]; then
+    touch tmp
     cat ~/.bashrc moji-bake.txt > tmp
     mv tmp ~/.bashrc
     rm tmp
@@ -29,6 +30,7 @@ apt-get -y install gnuplot-qt
 
 # Emacs
 if [ `uname` = "Darwin" ]; then
+    touch tmp
     cat emacs.txt mac-emacs.txt > tmp
     mv tmp emacs.txt
     rm tmp
