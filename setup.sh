@@ -65,5 +65,5 @@ LANG=C xdg-user-dirs-gtk-update
 
 
 # Remove file
-
-rm -rf
+cd ..
+rm -rf SetUp-master/
