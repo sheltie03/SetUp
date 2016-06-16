@@ -33,8 +33,8 @@ mv emacs.txt ~/.emacs
 
 
 # Language
-sudo apt-get install ibus
-sudo apt-get install ibus-mozc
+sudo apt-get -y install ibus
+sudo apt-get -y install ibus-mozc
 
 
 # Latex
