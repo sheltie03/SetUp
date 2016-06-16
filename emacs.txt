@@ -1,0 +1,56 @@
+;;; Default
+(put 'upcase-region 'disabled nil)
+
+;;; Line Number
+;;(require 'linum)
+;;(global-linum-mode t)
+;;(setq linum-format "%1d: ")
+
+;;; WITHOUT Auto Save or Backup file
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
+;;; yes or no -> y or n
+(fset 'yes-or-no-p 'y-or-n-p)
+
+
+;;; Highlight
+(defface hlline-face
+  '((((class color)
+      (background dark))
+     (:background "dark slate gray"))
+    (((class color)
+      (background light))
+     (:background  "#99FF99"))
+    (t
+     ()))
+  "*Face used by hl-line.")
+(setq hl-line-face 'hlline-face)
+(global-hl-line-mode)
+
+
+;; Indent of c-mode makes 8SPACEs 1TAB
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             (c-set-style "k&r")
+	          (setq c-basic-offset 8)
+		       (setq indent-tabs-mode t)
+		            (setq tab-width 8)))
+
+
+;; \C-h -> back space
+(global-set-key "\C-h" 'delete-backward-char)
+
+
+;; Erase a last column
+(put 'set-goal-column 'disabled nil)
+
+
+;; cua-mode
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+(custom-set-variables
+ '(gud-gdb-command-name "gdb --annotate=1")
+ '(large-file-warning-threshold nil)
+ '(safe-local-variable-values (quote ((using . utf-8)))))
+(custom-set-faces)
