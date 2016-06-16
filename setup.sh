@@ -13,6 +13,7 @@ if [ `uname` != "Darwin" ]; then
     cat ~/.bashrc moji-bake.txt > tmp
     mv tmp ~/.bashrc
     rm tmp
+    source ~/.bashrc
 fi
 
 
