@@ -1,19 +1,8 @@
-# セットアップのスクリプト
-
-## setup.sh
-+ aptのインストース
-+ emacsの設定ファイル
-+ Latexのインストール
-+ Dropboxのインストール
+# emacsの設定ファイル
 
 ## 実行
 ```
-$ wget https://github.com/sheltie03/SetUp/archive/master.zip
-$ unzip master.zip
-$ cd SetUp-master/
-$ ls
-emacs.txt	moji-bake.txt	setup.sh
-mac-emacs.txt	pdfplatex.sh readme.md
-$ chmod 755 setup.sh
-$ sudo ./setup.sh
+git clone https://github.com/sheltie03/setup.git
+cp ./setup/emacs.txt ~/.emacs
+sudo cp ./setup/emacs.txt /root/.emacs
 ```
